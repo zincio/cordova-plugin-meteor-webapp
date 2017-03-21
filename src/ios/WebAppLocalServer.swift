@@ -328,10 +328,10 @@ open class WebAppLocalServer: METPlugin, AssetBundleManagerDelegate {
     }
     
     // Don't download versions potentially incompatible with the bundled native code
-    if manifest.cordovaCompatibilityVersion != configuration.cordovaCompatibilityVersion {
-      notifyError(WebAppError.unsuitableAssetBundle(reason: "Skipping downloading new version because the Cordova platform version or plugin versions have changed and are potentially incompatible", underlyingError: nil))
-      return false
-    }
+    //if manifest.cordovaCompatibilityVersion != configuration.cordovaCompatibilityVersion {
+    //  notifyError(WebAppError.unsuitableAssetBundle(reason: "Skipping downloading new version because the Cordova platform version or plugin versions have changed and are potentially incompatible", underlyingError: nil))
+    //  return false
+    //}
 
     return true
   }
