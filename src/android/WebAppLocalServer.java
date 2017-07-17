@@ -363,10 +363,10 @@ public class WebAppLocalServer extends CordovaPlugin implements AssetBundleManag
         }
 
         // Don't download versions potentially incompatible with the bundled native code
-        //if (!configuration.getCordovaCompatibilityVersion().equals(manifest.cordovaCompatibilityVersion)) {
-        //    notifyError(new WebAppException("Skipping downloading new version because the Cordova platform version or plugin versions have changed and are potentially incompatible"));
-        //    return false;
-        //}
+        if (!configuration.getCordovaCompatibilityVersion().equals(manifest.cordovaCompatibilityVersion)) {
+            notifyError(new WebAppException("Skipping downloading new version because the Cordova platform version or plugin versions have changed and are potentially incompatible"));
+            return false;
+        }
 
         return true;
     }
