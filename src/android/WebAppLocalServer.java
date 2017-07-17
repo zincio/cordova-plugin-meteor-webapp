@@ -182,7 +182,6 @@ public class WebAppLocalServer extends CordovaPlugin implements AssetBundleManag
             currentAssetBundle = pendingAssetBundle;
             pendingAssetBundle = null;
         }
-        if(currentAssetBundle == null){ return; } //TODO: Figure out why currentAssetBundle is null. This hack should stop app from crashing.
 
         Log.i(LOG_TAG, "Serving asset bundle with version: " + currentAssetBundle.getVersion());
 
